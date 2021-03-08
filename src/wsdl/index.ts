@@ -274,7 +274,9 @@ export class WSDL {
           }
         }
 
-        topSchema = message.description(this.definitions);
+        if (message) {
+          topSchema = message.description(this.definitions);
+        }
         objectName = originalName;
       }
 
